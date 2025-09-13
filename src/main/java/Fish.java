@@ -15,9 +15,8 @@ public class Fish extends Animal implements Can_breath_water {
 
     public void checkup() {
         int HL = this.health_level;
-        System.out.printf("'%s'을/를 검진합니다.\n", this.name);
 
-        eat_digest(HL);
+        super.checkup();
         breath_water(HL);
     }
 }

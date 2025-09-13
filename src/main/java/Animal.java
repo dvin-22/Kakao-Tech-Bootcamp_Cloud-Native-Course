@@ -35,17 +35,12 @@ public class Animal extends Thread {
         eat_digest(this.health_level);
     }
 
-    public void start() { // 동물을 병원에 보냄
+    public void run() { // 동물을 병원에 보냄
         System.out.printf("--- %s(이)를 병원으로 이동 중 ---\n", this.name);
         System.out.printf("--- %s 병원 접수 중 ---\n", this.name);
         System.out.printf("--- %s 진찰 중 ---\n", this.name);
         System.out.printf("--- %s 치료 중 ---\n", this.name);
         this.health_level = this.health_level + 2;
-        try {
-            throw new RuntimeException("치료 중 예외 발견");
-        } catch (Exception e) {
-            System.out.println("예외 처리됨: " + e.getMessage());
-        }
     }
 
     public void health_down() {

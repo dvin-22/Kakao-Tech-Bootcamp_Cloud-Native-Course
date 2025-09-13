@@ -15,9 +15,8 @@ public class Insect extends Animal implements Six_legs {
 
     public void checkup() {
         int HL = this.health_level;
-        System.out.printf("'%s'을/를 검진합니다.\n", this.name);
 
-        eat_digest(HL);
+        super.checkup();
         check_legs(HL);
     }
 }

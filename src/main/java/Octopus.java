@@ -24,10 +24,8 @@ public class Octopus extends Fish {
 
     public void checkup() {
         int HL = this.health_level;
-        System.out.printf("'%s'을/를 검진합니다.\n", this.name);
 
-        eat_digest(HL);
-        breath_water(HL);
+        super.checkup();
         spew_ink(HL);
         change_color(HL);
     }
